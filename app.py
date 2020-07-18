@@ -48,7 +48,7 @@ def delete(id):
 def update(id):
     task = Todo.query.get_or_404(id)
 
-    if request.method == 'POST':  #when user clicks on update
+    if request.method == 'POST':  #when user clicks on update in update.html page
         task.content = request.form['content']  #content being updated to new text entered by user
 
         try:
